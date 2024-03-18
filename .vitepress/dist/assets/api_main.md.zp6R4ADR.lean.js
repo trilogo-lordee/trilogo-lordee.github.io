@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a2 as t}from"./chunks/framework.Bx6qu0xe.js";const g=JSON.parse('{"title":"Вступление","description":"","frontmatter":{},"headers":[],"relativePath":"api/main.md","filePath":"api/main.md"}'),p={name:"api/main.md"},e=t("",18),n=[e];function l(h,k,o,d,c,r){return a(),i("div",null,n)}const u=s(p,[["render",l]]);export{g as __pageData,u as default};
