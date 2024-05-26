@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a2 as n}from"./chunks/framework.Bx6qu0xe.js";const y=JSON.parse('{"title":"Товар","description":"","frontmatter":{},"headers":[],"relativePath":"api/product.md","filePath":"api/product.md"}'),t={name:"api/product.md"},h=n("",15),k=[h];function p(l,e,E,d,r,o){return a(),i("div",null,k)}const u=s(t,[["render",p]]);export{y as __pageData,u as default};
