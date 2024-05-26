@@ -1,7 +1,7 @@
 # Товар
 
 ## Создание товара
-Для того чтобы создать склад необходимо отправить POST запрос по адресу
+Для того чтобы создать товар необходимо отправить POST запрос по адресу
 ```
 https://homecomfort.kz/api/product/create
 ```
@@ -37,13 +37,13 @@ https://homecomfort.kz/api/product/create
     "condition": "NEW", // Состояние товара
     "price": 1000, // Цена товара
     "minimal_quantity": 1, // Минимальное количество товара
-    "remains": [ // Остатки товара
+    "leftovers": [ // Остатки товара
         {
             "uuid": "0000-0000-0000-0000", // UUID склада
             "quantity": 100 // Количество товара
         }
     ],
-    "available": 100, // Количество товара
+    "available": "IN_STOCK", // Доступность товара
     "available_from": "2021-01-01", // Дата начала доступности товара
     "available_till": "2021-01-01", // Дата окончания доступности товара
     "is_hot": true, // Горячий товар
@@ -62,6 +62,15 @@ https://homecomfort.kz/api/product/create
 :::
 
 ## Обновление товара
+Аналогично складам, товары можно обновлять. Для этого необходимо отправить `POST` запрос по адресу
+```
+https://homecomfort.kz/api/product/edit/{id}
+```
+или по `UUID`
+```
+https://homecomfort.kz/api/product/edit/uuid/{uuid}
+```
+
 Для обновление цены и остатков товара доступен сокращенный запрос с методом `PATCH` по адресу
 ```
 https://homecomfort.kz/api/product/patch/{id}
@@ -75,7 +84,7 @@ https://homecomfort.kz/api/product/patch/uuid/{uuid}
 {
     "price": 1000, // Цена товара
     "discount": 10, // Скидка на товар в процентах
-    "remains": [
+    "leftovers": [
         {
             "uuid": "0000-0000-0000-0000", // UUID склада
             "quantity": 100 // Количество товара
